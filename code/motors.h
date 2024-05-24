@@ -4,12 +4,12 @@
 #include "Arduino.h"
 
 // Motor Pin Indeces
-#define MOTORSR_F A3
-#define MOTORSR_B A4
-#define MOTORSL_F A1
-#define MOTORSL_B A2
-#define MOTORSV_F 0
-#define MOTORSV_B 1
+#define MOTORSR_F A1
+#define MOTORSR_B A2
+#define MOTORSL_F A3
+#define MOTORSL_B A4
+#define MOTORSV_F 6
+#define MOTORSV_B 9
 
 // Accessory pin indeces
 #define SWITCH1_PIN 2

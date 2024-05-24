@@ -36,6 +36,8 @@ void setup() {
   MotorsR.init();
   MotorsL.init();
   MotorV.init();
+  pinMode(0, OUTPUT);
+  pinMode(1, OUTPUT);
 }
 
 void loop() {
