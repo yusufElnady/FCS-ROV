@@ -59,10 +59,13 @@ class GamePad:
 j = GamePad(1)
 
 while True:
-    analog_data = "".join([chr(int((x+1)*50)) for x in j.getAnalog()])
-    buttons_data = "".join([str(x) for x in j.getButtons()])
+    analog_data = [chr(int((x+1)*50)) for x in j.getAnalog()]
+    analog_data = "".join([analog_data[1], analog_data[2]])
+    buttons_data = [str(x) for x in j.getButtons()]
+    buttons_data = "".join([buttons_data[0], buttons_data[1], buttons_data[2], buttons_data[3], buttons_data[6], buttons_data[7]])
 
     data = analog_data + buttons_data
 
     s.sendto(data.encode(), (IP_ADDRESS, PORT))
-    print([int((x+1)*50) for x in j.getAnalog()])
+    # print([int((x+1)*50) for x in j.getAnalog()])
+    print(data)

@@ -1,5 +1,10 @@
 #include "motors.h"
 
+void Motor::init() {
+    pinMode(this->f_pin, OUTPUT);
+    pinMode(this->b_pin, OUTPUT);
+}
+
 void Motor::forward() {
     digitalWrite(this->f_pin, HIGH);
     digitalWrite(this->b_pin, LOW);

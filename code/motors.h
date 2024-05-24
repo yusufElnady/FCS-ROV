@@ -4,28 +4,26 @@
 #include "Arduino.h"
 
 // Motor Pin Indeces
-#define MOTOR1_F A0
-#define MOTOR1_B A1
-#define MOTOR2_F A2
-#define MOTOR2_B A3
-#define MOTOR3_F A4
-#define MOTOR3_B A5
-#define MOTOR4_F A6
-#define MOTOR4_B A7
+#define MOTORSR_F A3
+#define MOTORSR_B A4
+#define MOTORSL_F A1
+#define MOTORSL_B A2
+#define MOTORSV_F 0
+#define MOTORSV_B 1
 
-#define FRONT_VERTICAL_F 3
-#define FRONT_VERTICAL_B 5
-#define REAR_VERTICAL_F 6
-#define REAR_VERTICAL_B 9
+// Accessory pin indeces
+#define SWITCH1_PIN 2
+#define SWITCH2_PIN 7
 
-// Packet Indeces
-#define UP_BUTTON_INDEX 7
-#define DOWN_BUTTON_INDEX 6
-
-#define LEFT_ANALOG_X_INDEX 0
-#define LEFT_ANALOG_Y_INDEX 1
-#define RIGHT_ANALOG_Y_INDEX 2
-#define RIGHT_ANALOG_X_INDEX 3
+// Button Indeces in the packet
+#define LEFT_ANALOG_Y_INDEX 0
+#define RIGHT_ANALOG_Y_INDEX 1
+#define L2_INDEX 6
+#define R2_INDEX 7
+#define BUTTON1_INDEX 2
+#define BUTTON2_INDEX 3
+#define BUTTON3_INDEX 4
+#define BUTTON4_INDEX 5
 
 #define DEADZONE 25
 
@@ -40,6 +38,8 @@ class Motor {
             this->b_pin = b;
         }
 
+        void init();
+        
         void forward();
 
         void backward();
